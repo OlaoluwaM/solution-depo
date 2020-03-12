@@ -3,10 +3,10 @@
 /**
  *
  * @param {[]} arr
+ * Time Complexity: O(n) Linear time
  */
 
 function findNumber(arr) {
-  debugger;
   if (arr.length === 0) return 1;
 
   const newArr = arr.filter(v => v > 0);
