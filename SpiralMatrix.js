@@ -3,51 +3,59 @@
 /**
  *
  * @param {[]} array
- * time complexity: not sure ??
+ * Time complexity: between O(n) (Linear) or O(n**2) (Quadratic)
  */
 
 function spiralMatrix(array) {
   if (array.length === 1) return array[0];
   const last = array.length - 1;
-  const ans = [];
+  const output = [];
+
   let top = 0,
     left = 0,
     right = last,
-    bottom = last;
-  let dir = 0;
+    bottom = last,
+    dir = 0;
+
   while (top <= bottom && left <= right) {
-    debugger;
     if (dir === 0) {
       for (let i = left; i <= right; i++) {
-        ans.push(array[top][i]);
+        output.push(array[top][i]);
       }
+
       top++;
       dir++;
     } else if (dir === 1) {
       for (let i = top; i <= bottom; i++) {
-        ans.push(array[i][right]);
+        output.push(array[i][right]);
       }
+
       right--;
       dir++;
     } else if (dir === 2) {
       for (let i = right; i >= left; i--) {
-        ans.push(array[bottom][i]);
+        output.push(array[bottom][i]);
       }
+
       bottom--;
       dir++;
     } else {
       for (let i = bottom; i >= top; i--) {
-        ans.push(array[i][left]);
+        output.push(array[i][left]);
       }
+
       left++;
       dir = 0;
     }
   }
-  return ans;
+
+  return output;
 }
 
+// Tests
+
 console.log(
-  snail([
+  spiralMatrix([
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9],
@@ -55,7 +63,7 @@ console.log(
 );
 
 console.log(
-  snail([
+  spiralMatrix([
     [1, 2, 3, 4, 5, 6],
     [20, 21, 22, 23, 24, 7],
     [19, 32, 33, 34, 25, 8],
