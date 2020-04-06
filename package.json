@@ -1,0 +1,36 @@
+{
+  "name": "coding-problems",
+  "version": "1.0.0",
+  "description": "Repo of coding problem solutions",
+  "main": "/",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlaoluwaM/solution-depo.git"
+  },
+  "author": "Olaoluwa Mustapha <jomeemustapha@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OlaoluwaM/solution-depo/issues"
+  },
+  "homepage": "https://github.com/OlaoluwaM/solution-depo#readme",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.0",
+    "@types/jest": "^25.1.5",
+    "jest": "^25.2.6"
+  }
+}

@@ -1,7 +1,3 @@
-complexity.js
-problem1.js
-problem2.js
 .vscode
-JosephusPerm.js
-Two-numbers.js
-NotMySolution.js
+node_modules
+solutions/doNotPush
