@@ -32,7 +32,44 @@ test('Should be false', () => {
   expect(value).toBeFalsy();
 });
 
+test('should be true 2', () => {
+  const value = validSolution([
+    [1, 4, 2, 3],
+    [3, 2, 4, 1],
+
+    [4, 1, 3, 2],
+    [2, 3, 1, 4],
+  ]);
+
+  expect(value).toBeTruthy();
+});
+
 test('Should be false 2', () => {
   const value = validSolution(new Array(9).fill([5, 5, 5, 5, 5, 5, 5, 5, 5]));
+  expect(value).toBeFalsy();
+});
+
+test('should be false 3', () => {
+  const value = validSolution([
+    [1, 2, 3, 4, 5],
+    [1, 2, 3, 4],
+    [1, 2, 3, 4],
+    [1],
+  ]);
+  expect(value).toBeFalsy();
+});
+
+test('should be false 4', () => {
+  const value = validSolution([
+    [0, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  ]);
   expect(value).toBeFalsy();
 });
