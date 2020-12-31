@@ -8,4 +8,6 @@ solution file reflects the name of the problem for easy reference for others.
 You can find more problems like these to solve at
 [codewars](https://www.codewars.com)
 
+If there is a problem with any of these solutions, please feel free to open an issue
+
 **Note: All time complexities stated are for the worst case**

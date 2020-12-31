@@ -8,22 +8,17 @@
  */
 
 function bubbleSort(arr) {
-  let count = 0;
-  while (count <= arr.length) {
-    let swapCount = 0;
-    for (let i = 0; i < arr.length - 1; i++) {
-      const currNum = arr[i];
-      if (currNum > arr[i + 1]) {
+  let swapped;
+  do {
+    swapped = false;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] && arr[i + 1] && arr[i] > arr[i + 1]) {
         swap(arr, i, i + 1);
-        swapCount++;
+        swapped = true;
       }
     }
+  } while (swapped);
 
-    if (swapCount === 0) {
-      break;
-    }
-    count++;
-  }
   return arr;
 }
 
@@ -34,7 +29,7 @@ function swap(arr, indexA, indexB) {
 
 // Test
 
-const smallArr = [1, 4, 7, 33, 25];
+const smallArr = [1, 77, 33];
 const bigArr = [
   700,
   300,
@@ -99,5 +94,5 @@ const bigArr = [
 ];
 
 console.time('timer');
-console.log(bubbleSort(bigArr));
+console.log(bubbleSort(smallArr));
 console.timeEnd('timer');
